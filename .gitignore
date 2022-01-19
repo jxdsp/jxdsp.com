@@ -1,0 +1,12 @@
+/.idea/
+/**/php_errors.log
+
+/node_modules/
+/vendor/
+
+/**/*.env
+
+/.cache/
+
+/wwwRoot/
+!/wwwRoot/api/
