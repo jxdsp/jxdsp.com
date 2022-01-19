@@ -1,0 +1,10 @@
+**/*.min.js
+
+/.idea/
+
+/vendor/
+
+/gulpfile.js/
+/wwwRoot/
+/src/classes/
+/src/api/

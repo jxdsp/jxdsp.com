@@ -1,0 +1,7 @@
+src/webFrontEnd/assets/
+src/webFrontEnd/template/
+
+.cache/
+
+*.html
+*.htm

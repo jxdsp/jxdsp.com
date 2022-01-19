@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('./_head.htm', {
+        "title": "加入 - 解析短视频 - 全网视频在线无水印解析vip下载",
+        "description": "一天看一部好剧，一部好剧看一天。你想看的视频这里都能给你，无论长视频，短视频，重点不是长短，是视频。",
+        "keywords": "全网短视频解析下载,vip视频解析,视频解析网站,短视频解析,短视频解析下载,一键视频解析",
+        "meta": "",
+        "style": "@@include('./_style.htm',{'path': '',})",
+        "noScript": "@@include('./_noScript.htm')",
+        "script": "@@include('./_head_script.htm',{'path': '',})",
+    })
+</head>
+<body>
+<div id="body" hidden>
+    @@include('./_headerNavbar.htm', {
+        "URIPath":"."
+    })
+    <div class="min-vh-100" id="jx_content">
+        @@include('./ads/ad_t1_a.htm')
+        <div class="tab-content">
+            @@include('./account_form/tab-sign_in.htm',{'prefixId':'signIn'})
+            @@include('./account_form/tab-sign_in_phone.htm',{'prefixId':'signIn'})
+            @@include('./account_form/tab-sign_up.htm',{'prefixId':'signUp'})
+            @@include('./account_form/tab-reset.htm')
+        </div>
+        <div class="my-2 py-2 justify-content-end list-group list-group-horizontal small">
+            <a class="mx-1 text-decoration-none sign_modal_tab" href="javascript:" data-bs-target="#tab-sign_in_phone">
+                <i class="fas fa-lg fa-mobile-alt"></i>
+                <span class="text-muted">手机号登录</span>
+            </a>
+            <a class="mx-1 text-decoration-none sign_modal_tab" href="javascript:" data-bs-target="#tab-password_reset">
+                <i class="fas fa-lg fa-user-injured"></i>
+                <span class="text-muted">忘记密码</span>
+            </a>
+        </div>
+        <div class="dropdown-divider border-top-dotted"></div>
+        <div class="my-2 position-relative d-flex justify-content-center align-items-center">
+            <div class="w-50 w-lg-25 btn-group btn-group-sm list-group list-group-horizontal" id="sign_tab">
+                <button class="btn btn-outline-secondary d-flex justify-content-center align-items-center sign_modal_tab"
+                        type="button" data-bs-target="#tab-sign_in">
+                    <i class="fas fa-lg fa-sign-in-alt text-darkorange"></i>
+                    <span class="text-nowrap ml-sm-1">登录</span>
+                </button>
+                <button class="btn btn-outline-secondary d-flex justify-content-center align-items-center sign_modal_tab"
+                        type="button" data-bs-target="#tab-sign_up">
+                    <i class="fas fa-lg fa-user-plus text-yellowgreen"></i>
+                    <span class="text-nowrap ml-sm-1">注册</span>
+                </button>
+            </div>
+            <i class="position-absolute d-flex justify-content-center align-items-center text-danger fa-lg fas fa-window-close"
+               data-bs-dismiss="modal" style="right: 0;"></i>
+        </div>
+        <div class="my-2 collapse" id="collapse_oauth">
+            <div class="d-flex justify-content-between justify-content-sm-center flex-row" id="oauth_sign_in"
+                 style="overflow-x: auto;">
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-alipay"
+                        data-bs-title="支付宝登录"></button>
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-weixin"
+                        data-bs-title="微信登录"></button>
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-qq"
+                        data-bs-title="QQ登录"></button>
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-github"
+                        data-bs-title="GitHub登录"></button>
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-google"
+                        data-bs-title="谷歌登录"></button>
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-weibo"
+                        data-bs-title="微博登录"></button>
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-facebook"
+                        data-bs-title="脸书登录"></button>
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-twitter"
+                        data-bs-title="推特登录"></button>
+                <button type="button" class="p-2 border-0 btn btn-outline-secondary fab fa-lg fa-linkedin"
+                        data-bs-title="领英登录"></button>
+            </div>
+        </div>
+        <button class="mt-3 rounded-pill btn btn-sm border-orangered d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#collapse_oauth" id="oauth_collapse">
+            <i class="mr-1 fas fa-lg fa-sign-in-alt text-orangered"></i>
+            <span class="text-orangered">第三方社交账号登录</span>
+        </button>
+    </div><!--id=jt_content-->
+    @@include('./_footer.htm')
+    @@include('./account_form/modal_sign.htm')
+</div><!--id=body-->
+@@include('./_script.htm', {
+    "path": "../../",
+})
+<script src="../../static/js/root/index.min.js"></script>
+<script src="../../static/js/root/faq.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="tab-pane fade" id="tab-reset">
+    <div class='needs-validation' id="account_reset">
+        <div class="mb-3">
+            <label class="d-none d-sm-block col-2 mb-0 mb-sm-1 text-nowrap text-align-last" for="reset_account">账号</label>
+            <div class="input-group has-validation">
+                <input class="form-control" type="text" id="reset_account" placeholder="账号或者邮箱" minlength="5" maxlength="40" pattern="" autocomplete="off" required>
+                <div class="invalid-feedback">字母均为小写</div>
+            </div>
+        </div>
+        @@include('./account_form/captcha_form.htm',{
+            "prefixId":"reset"
+        })
+        <div class="d-flex justify-content-center">
+            <button class="w-50 rounded-lg btn btn-success" type="button" id="reset_submit">找回密码</button>
+        </div>
+        <div class='mt-2 d-flex justify-content-between align-items-center list-group list-group-horizontal small'>
+            <a class='text-muted text-decoration-none sign_modal_tab' href='javascript:' data-bs-target='#tab-sign_up'>
+                <span>创建新账号</span>
+            </a>
+        </div>
+    </div>
+</div>

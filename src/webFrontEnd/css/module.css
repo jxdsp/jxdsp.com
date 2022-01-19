@@ -1,0 +1,20 @@
+/* root */
+:root {
+  --jx-lang-font-en: var(--bs-font-sans-serif);
+  --jx-lang-font-zh: 'Microsoft Yahei', var(--bs-font-sans-serif);
+  --jx-lang-font-zh_CN: var(--bs-font-sans-serif);
+  --jx-lang-font-zh_TW: var(--bs-font-sans-serif);
+}
+
+/* 多语言设置 */
+html[lang='en'] body,
+html[lang^='en-'] body {
+  font-family: var(--jx-lang-font-en);
+}
+
+html[lang='zh'] body,
+html[lang^='zh-'] body,
+html[lang='zh-CN'] body,
+html[lang='zh-TW'] body {
+  font-family: var(--jx-lang-font-zh);
+}

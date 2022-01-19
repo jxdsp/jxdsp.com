@@ -1,0 +1,42 @@
+<div class='modal fade' id='sign' tabindex='-1'>
+    <div class='modal-dialog modal-dialog-centered modal-dialog-scrollable'>
+        <div class='modal-content bg-light'>
+            <div class='modal-body'>
+                <div class='tab-content'>
+                    @@include('./account_form/tab-sign_in.htm',{'prefixId':'signIn'})
+                    @@include('./account_form/tab-sign_in_phone.htm',{'prefixId':'signIn'})
+                    @@include('./account_form/tab-sign_up.htm',{'prefixId':'signUp'})
+                    @@include('./account_form/tab-reset.htm')
+                </div>
+                <div class='dropdown-divider border-top-dotted'></div>
+                <div class='my-2 collapse' id='collapse_oauth'>
+                    <div class='hstack justify-content-between justify-content-sm-center' id='oauth_sign_in' style='overflow-x: auto;'>
+                        <button type='button' class='p-2 border-0 btn btn-outline-secondary' data-bs-title='支付宝登录'>
+                            <svg class='fa-lg fab fa-alipay'></svg>
+                        </button>
+                        <button type='button' class='p-2 border-0 btn btn-outline-secondary' data-bs-title='微信登录'>
+                            <svg class='fa-lg fab fa-weixin'></svg>
+                        </button>
+                        <button type='button' class='p-2 border-0 btn btn-outline-secondary' data-bs-title='QQ登录'>
+                            <svg class='fa-lg fab fa-qq'></svg>
+                        </button>
+                        <button type='button' class='p-2 border-0 btn btn-outline-secondary' data-bs-title='微博登录'>
+                            <svg class='fa-lg fab fa-weibo'></svg>
+                        </button>
+                        <button type='button' class='p-2 border-0 btn btn-outline-secondary' data-bs-title='GitHub登录'>
+                            <svg class='fa-lg fab fa-github'></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class='d-flex justify-content-between align-items-center'>
+                    <a class='small text-muted text-decoration-none' href='javascript:' data-bs-toggle='collapse' data-bs-target='#collapse_oauth' id='oauth_collapse'>
+                        <span>社交账号登录</span>
+                    </a>
+                    <a href='javascript:' data-bs-dismiss='modal'>
+                        <button type="button" class="btn-close" aria-label="Close"></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

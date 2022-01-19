@@ -1,0 +1,169 @@
+<header class='bg-white' id='jx_header'>
+    <nav class='py-1 navbar navbar-expand-lg navbar-light container d-flex justify-content-between align-items-center'>
+        <h1 class='position-relative mb-0 h4 d-flex align-items-center text-nowrap text-orangered'>解析短视频</h1>
+        <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navBar'>
+            <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='navbar-collapse collapse' id='navBar'>
+            <ul class='navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll' id='navBar-menu' style='--bs-scroll-height: 200px;'>
+                <li class='nav-item'>
+                    <a class='nav-link fw-bolder' href='@@URIPath/'>首页</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link fw-bolder' href='@@URIPath/long_video/' target='_blank'>长视频解析</a>
+                </li>
+                <li class='nav-item dropdown'>
+                    <a class='nav-link fw-bolder dropdown-toggle' href='javascript:' data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-expanded='false'>作品列表解析</a>
+                    <ul class='dropdown-menu shadow text-center animate__animated animate__fadeInDown animate__faster'>
+                        <li><a class='dropdown-item' href='@@URIPath/batch.html' target='_blank'>主页列表</a></li>
+                        <li><a class='dropdown-item' href='@@URIPath/like.html' target='_blank'>喜欢列表</a></li>
+                    </ul>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link fw-bolder' href='@@URIPath/faq.html' target='_blank'>常见问题</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link fw-bolder' href='@@URIPath/support.html' target='_blank'>支持</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link fw-bolder' href='@@URIPath/donation.html' target='_blank'>捐赠</a>
+                </li>
+            </ul>
+            <div class="d-lg-none dropdown-divider"></div>
+            <div class='d-flex align-items-center'>
+                <div class="dropdown">
+                    <button class='mx-1 btn border-0 btn-outline-secondary' type='button' id='dropdown_search' data-bs-toggle='dropdown'>
+                        <svg class='fas fa-lg fa-search'></svg>
+                        <span class='visually-hidden-focusable'>搜索</span>
+                    </button>
+                    <div class='shadow dropdown-menu dropdown-menu-lg-end animate__animated animate__fadeInDown animate__faster'>
+                        <div class='card-body'>
+                            <div class='input-group'>
+                                <input class='form-control' type='search' id='search' placeholder='未启用' disabled>
+                                <label class='form-label' for='search'></label>
+                                <button class='btn btn-outline-secondary' disabled>提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class='mx-1 btn border-0 btn-outline-secondary' type='button' id='history' data-bs-toggle='dropdown'>
+                        <svg class='fas fa-lg fa-history'></svg>
+                        <span class='visually-hidden-focusable'>历史</span>
+                    </button>
+                    <div class='shadow py-0 dropdown-menu dropdown-menu-lg-end animate__animated animate__fadeInDown animate__faster'>
+                        <div class='card-header d-flex justify-content-between'>
+                            <span class='small'>解析记录</span>
+                            <a class='link-secondary' href='javascript:' title='清除解析记录' id='clearParseHistory'>
+                                <svg class='far fa-trash-alt'></svg>
+                                <span class='visually-hidden'>清除解析记录</span>
+                            </a>
+                        </div>
+                        <div class='px-1 py-2 nav btn-group btn-group-sm' id='nav-tab' role='tablist'>
+                            <button class='btn btn-outline-secondary active' id='nav-parse-success-tab' data-bs-toggle='tab' data-bs-target='#nav-parse-success' type='button' role='tab' aria-controls='nav-parse-success' aria-selected='true'>成功</button>
+                            <button class='btn btn-outline-secondary' id='nav-parse-fail-tab' data-bs-toggle='tab' data-bs-target='#nav-parse-fail' type='button' role='tab' aria-controls='nav-parse-fail' aria-selected='false'>失败</button>
+                        </div>
+                        <div class='tab-content' id='nav-tabContent'>
+                            <div class='tab-pane fade show active' id='nav-parse-success' role='tabpanel' aria-labelledby='nav-parse-success-tab'>
+                                <div class='list-group list-group-flush'>
+                                    <div class='list-group-item list-group-item-action list-group-item-light'>
+                                        <div class='row gx-1 align-items-center'>
+                                            <a class='col stretched-link' href='#'>
+                                                <span class='placeholder col-12'></span>
+                                            </a>
+                                            <span class='col small'>成功</span>
+                                            <a class='col clearThisHistory small btn-close' href='javascript:' title='删除本条记录'>
+                                                <span class='visually-hidden'>删除</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class='list-group-item list-group-item-action list-group-item-light'>
+                                        <div class='row gx-1 align-items-center'>
+                                            <a class='col stretched-link' href='#'>
+                                                <span class='placeholder col-12'></span>
+                                            </a>
+                                            <span class='col small'>成功</span>
+                                            <a class='col clearThisHistory small btn-close' href='javascript:' title='删除本条记录'>
+                                                <span class='visually-hidden'>删除</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='tab-pane fade' id='nav-parse-fail' role='tabpanel' aria-labelledby='nav-parse-fail-tab'>
+                                <div class='list-group list-group-flush'>
+                                    <div class='list-group-item list-group-item-action list-group-item-light'>
+                                        <div class='row gx-1 align-items-center'>
+                                            <a class='col stretched-link' href='#'>
+                                                <span class='placeholder col-12'></span>
+                                            </a>
+                                            <span class='col small'>失败</span>
+                                            <a class='col clearThisHistory small btn-close' href='javascript:' title='删除本条记录'>
+                                                <span class='visually-hidden'>删除</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class='mx-1 btn border-0 btn-outline-secondary account_sign_out d-none' type='button' id='dropdown_account' data-bs-toggle='dropdown'>
+                        <svg class='fas fa-lg fa-user text-crimson'></svg>
+                        <span>账号</span>
+                    </button>
+                    <ul class='shadow dropdown-menu dropdown-menu-lg-end text-center animate__animated animate__fadeInDown animate__faster'>
+                        <li>
+                            <a class='dropdown-item' href='javascript:' target='_blank'>
+                                <svg class='fas fa-lg fa-user-alt'></svg>
+                                <span>用户名</span>
+                            </a>
+                        </li>
+                        <li><hr class='dropdown-divider'></li>
+                        <li>
+                            <a class='dropdown-item' href='javascript:' target='_blank'>
+                                <svg class='fas fa-lg fa-user-lock'></svg>
+                                <span>我的资料</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class='dropdown-item' href='javascript:' target='_blank'>
+                                <svg class='fas fa-lg fa-user-cog'></svg>
+                                <span>个人设置</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class='dropdown-item' href='javascript:' target='_blank'>
+                                <svg class='fas fa-lg fa-user-secret'></svg>
+                                <span>隐私设置</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class='dropdown-item' href='javascript:' target='_blank'>
+                                <svg class='fas fa-lg fa-cog'></svg>
+                                <span>网站设置</span>
+                            </a>
+                        </li>
+                        <li><hr class='dropdown-divider'></li>
+                        <li>
+                            <button class='dropdown-item' type='button' id='account_sign_exit'>
+                                <svg class='fas fa-lg fa-sign-out-alt'></svg>
+                                <span>退出</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <button class='mx-1 btn border-0 btn-outline-secondary account_sign' type='button' data-tab-target='#tab-sign_in'>
+                    <svg class='text-darkorange fa-lg fas fa-sign-in-alt'></svg>
+                    <span>登录</span>
+                </button>
+                <button class='mx-1 btn border-0 btn-outline-secondary account_sign' type='button' data-tab-target='#tab-sign_up'>
+                    <svg class='text-yellowgreen fa-lg fas fa-user-plus'></svg>
+                    <span>注册</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class='border-bottom'></div>
+</header>

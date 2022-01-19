@@ -1,0 +1,62 @@
+{
+  "name": "jxdsp.com/jxdsp.com",
+  "type": "project",
+  "description": "",
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "ext-curl": "*",
+    "ext-gd": "*",
+    "ext-json": "*",
+    "ext-sodium": "*",
+    "ext-xsl": "*",
+    "bepsvpt/secure-headers": "^7.1",
+    "bjeavons/zxcvbn-php": "^1.3",
+    "casbin/casbin": "^3.20",
+    "casbin/database-adapter": "^1.6",
+    "gregwar/captcha": "^1.1",
+    "inhere/php-validate": "dev-master#182adfcebc026a2e04f09a065f4917c1dfded5eb",
+    "overtrue/easy-sms": "^2.1",
+    "php-curl-class/php-curl-class": "^9.5",
+    "ramsey/uuid": "^4.2",
+    "symfony/mailer": "^5.4",
+    "symfony/twig-bridge": "^5.4",
+    "thingengineer/mysqli-database-class": "^2.9",
+    "twig/cssinliner-extra": "^3.3",
+    "twig/extra-bundle": "^3.3",
+    "vlucas/phpdotenv": "^5.4",
+    "web-token/jwt-framework": "^2.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "jxdsp\\Captcha\\": "src/classes/jxdsp/captcha/src",
+      "jxdsp\\Casbin\\": "src/classes/jxdsp/casbin/src",
+      "jxdsp\\Curl\\": "src/classes/jxdsp/curl/src",
+      "jxdsp\\Env\\": "src/classes/jxdsp/env/src",
+      "jxdsp\\Jwt\\": "src/classes/jxdsp/jwt/src",
+      "jxdsp\\Mail\\": "src/classes/jxdsp/mail/src",
+      "jxdsp\\Member\\": "src/classes/jxdsp/member/src",
+      "jxdsp\\Mysql\\": "src/classes/jxdsp/database/mysql/src",
+      "jxdsp\\Sms\\": "src/classes/jxdsp/sms/src",
+      "jxdsp\\VideoParser\\": "src/classes/jxdsp/videoParser/src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "jxdsp\\Captcha\\test\\": "src/classes/jxdsp/captcha/test",
+      "jxdsp\\Casbin\\test\\": "src/classes/jxdsp/casbin/test",
+      "jxdsp\\Curl\\test\\": "src/classes/jxdsp/curl/test",
+      "jxdsp\\Env\\test\\": "src/classes/jxdsp/env/test",
+      "jxdsp\\Jwt\\test\\": "src/classes/jxdsp/jwt/test",
+      "jxdsp\\Mail\\test\\": "src/classes/jxdsp/mail/test",
+      "jxdsp\\Member\\test\\": "src/classes/jxdsp/member/test",
+      "jxdsp\\Mysql\\test\\": "src/classes/jxdsp/database/mysql/test",
+      "jxdsp\\Sms\\test\\": "src/classes/jxdsp/sms/test",
+      "jxdsp\\VideoParser\\test\\": "src/classes/jxdsp/videoParser/test"
+    }
+  },
+  "repositories": {
+  }
+}

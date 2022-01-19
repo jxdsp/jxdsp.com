@@ -1,0 +1,31 @@
+<h1>登录成功通知</h1>
+
+<div>
+    <p>您在 {{ sitename }} 的账号 {{ username }} 在 {{ time_current }} 成功登录了。</p>
+    <p>如不是您本人进行的操作，请及时登录账号进行修改密码。</p>
+</div>
+
+<div>
+    <p>下面为您提供了您可能会需要用到的一些链接地址。</p>
+    <div>
+        <a href='{{ changePassword }}' target='_blank'>
+            <button type='button'>点击此处登录后跳转到密码修改页面</button>
+        </a>
+        <a href='{{ changePassword }}' target='_blank'>
+            <button type='button'>冻结账号</button>
+        </a>
+    </div>
+</div>
+
+<div>
+    <p>以下是本次登录时客户端的部分信息</p>
+    <div>
+        <span>IP</span><span> {{ ip }}</span>
+        <span>时间</span><span> {{ time }}</span>
+        <span>地址</span><span> {{ localaddress }}</span>
+        <span>浏览器</span><span> {{ browser }}</span>
+        <span>操作系统</span><span> {{ os }}</span>
+        <span>UA</span><span> {{ ua }}</span>
+    </div>
+</div>
+

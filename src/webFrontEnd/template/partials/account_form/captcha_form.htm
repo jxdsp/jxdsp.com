@@ -1,0 +1,10 @@
+<div class="mb-3">
+    <label class="d-none d-sm-block col-2 mb-0 mb-sm-1 text-nowrap text-align-last" for='@@prefixId_captchaCode'>验证码</label>
+    <div class="input-group has-validation">
+        <div class="p-0 input-group-text">
+            <a class="captchaImg" href='javascript:' data-background-image='process.env.DOMAIN_API/captcha/v2/' title='看不清可以点击刷新' style='width: 110px;height: 36px;'></a>
+        </div>
+        <input class="form-control" type="text" id='@@prefixId_captchaCode' placeholder="验证码" minlength="4" maxlength="4" pattern="^[a-z0-9]{4}$" autocomplete="off" aria-label="输入验证码" required>
+        <div class="invalid-tooltip">字母均为小写</div>
+    </div>
+</div>

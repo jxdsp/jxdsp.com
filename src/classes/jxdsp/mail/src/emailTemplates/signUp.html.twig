@@ -1,0 +1,40 @@
+{# templates/emails/signUp.html.twig #}
+{% apply inline_css(source('@styles/bootstrap.min.css')) %}
+    <div class='d-flex flex-column align-items-center'>
+        <div>
+            <h3 class='px-4'>欢迎加入！</h3>
+            <hr class='border border-primary border-3'>
+        </div>
+        <div class='px-3 py-2 rounded-3 border border-secondary'>
+            <div>您好，收到这封邮件是由于通过此邮箱地址进行了申请注册。</div>
+            <div>用户名为 {{ username }}</div>
+            <div>您只有在点击下面的激活按钮之后，才能完成账号的注册。</div>
+            <div>此次激活有效期是5分钟，过期后需要重新发送确认邮件，或者重新进行注册。</div>
+            <div class='my-2 text-center'>
+                <a class='btn btn-success' href='{{ active }}' target='_blank'>单击此处激活帐户</a>
+            </div>
+            <div>请于 {{ expiration_date }} 之前进行激活。</div>
+            <div>如果您当前无法点击上面的按钮进行激活，可以复制下面的地址后，手动在浏览器中打开，同样可以确认本次的确认激活账号。</div>
+            <div>
+                <pre><code>{{ active }}</code></pre>
+            </div>
+        </div>
+        <div class='my-3'></div>
+        <div class='p-2 rounded border border-warning'>
+            <div>如果您本人没有使用当前的邮箱地址进行操作，请直接忽略本邮件即可。</div>
+            <div>请勿向任何人提供邮件中的任何验证信息，尤其是验证码或者验证链接地址。</div>
+            <div>本邮件为系统设定自动发送，请勿直接向本邮箱地址回复任何内容，直接回复后无人查收。</div>
+        </div>
+        <div class='my-4'></div>
+        <div class='px-2 align-self-end'>
+            <p class='px-4'>感谢您的访问，祝您生活愉快！</p>
+            <hr class='border border-danger border-2'>
+            <div class='text-end'>
+                <p>{{ siteInfo.name }}</p>
+                <p>{{ siteInfo.url }}</p>
+                <p>{{ siteInfo.email }}</p>
+            </div>
+        </div>
+        <div class='my-2'></div>
+    </div>
+{% endapply %}

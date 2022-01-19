@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('./_head.htm', {
+        "title": "页面不存在 - 解析短视频",
+        "description": "一天看一部好剧，一部好剧看一天。你想看的视频这里都能给你，无论长视频，短视频，重点不是长短，是视频。",
+        "keywords": "全网短视频解析下载,vip视频解析,视频解析网站,短视频解析,短视频解析下载,一键视频解析",
+        "meta": "@@include('./meta/_robots_noindex.htm')",
+        "style": "@@include('./pages/error_pages/_style.htm')",
+        "noScript": "@@include('./_noScript.htm')",
+        "script": "@@include('./_head_script.htm',{'path': '',})",
+    })
+</head>
+<body>
+<div class="min-vh-100 container d-flex flex-column justify-content-center align-items-center">
+    <div>页面不存在，原因可能如下：</div>
+    <div class="mt-2">
+        <ol>
+            <li>要访问的页面内容已经被删除。</li>
+            <li>输入的网址不正确。</li>
+        </ol>
+    </div>
+    <div>建议如下：</div>
+    <div class="mt-2">
+        <ol>
+            <li>确认网址正确后重新访问。</li>
+            <li>返回首页查看其他内容。</li>
+        </ol>
+    </div>
+</div>
+@@include('./pages/error_pages/_script.htm')
+<script>
+    _analyticsPush_trackEvent(['状态码', '403'])
+</script>
+</body>
+</html>

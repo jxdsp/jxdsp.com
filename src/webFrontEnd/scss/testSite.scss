@@ -1,0 +1,18 @@
+@import "variables";
+
+.test {
+    position: absolute;
+    animation: 1s linear infinite progress-bar-stripes
+}
+
+#test {
+    text-align: center;
+
+    .test {
+        color: #fff;
+
+        > .aaa {
+            display: inline;
+        }
+    }
+}

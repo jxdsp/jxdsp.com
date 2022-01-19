@@ -1,0 +1,47 @@
+<div class="tab-pane fade" id="tab-sign_in">
+    <div class='needs-validation' id="account_sign_in">
+        <div class="mb-3">
+            <label class="d-none d-sm-block col-2 mb-0 mb-sm-1 text-nowrap text-align-last" for="@@prefixId_username">用户名</label>
+            <div class="input-group has-validation">
+                <input class="form-control" type="text" id="@@prefixId_username" placeholder="用户名" minlength="3" maxlength="15" pattern="^[a-zA-Z]\w{4,15}$" required>
+                <div class="invalid-tooltip">字母开头的5-20位字母或数字</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="d-none d-sm-block col-2 mb-0 mb-sm-1 text-nowrap text-align-last" for="@@prefixId_password">密码</label>
+            <div class="input-group has-validation">
+                <input class="form-control" type="password" id="@@prefixId_password" placeholder="密码" minlength="8" maxlength="20" pattern="^\S*(?=\S{8,})(?=\S*\d)(?=\S*[a-zA-Z])(?=\S*[`.~!@#$%^&*? ])\S*$" required>
+                <div class="input-group-text password_switch" title='显示密码'>
+                    <svg class="text-muted fas fa-fw fa-lg fa-eye"></svg>
+                </div>
+                <div class="invalid-tooltip">长度大于等于8位，包含字母、数字、字符等2种组合</div>
+            </div>
+        </div>
+        @@include('./account_form/captcha_form.htm',{
+            "prefixId":"signIn"
+        })
+        <div class="mb-3">
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label text-secondary small" for="rememberMe">30天内免登录</label>
+                    <div class="invalid-tooltip">勾选视为同意</div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="w-50 rounded-lg btn btn-success" type="button" id="@@prefixId_submit">登录</button>
+        </div>
+        <div class='mt-2 d-flex justify-content-between align-items-center list-group list-group-horizontal small'>
+            <a class='text-muted text-decoration-none sign_modal_tab' href='javascript:' data-bs-target='#tab-sign_up'>
+                <span>创建新账号</span>
+            </a>
+            <a class='text-muted text-decoration-none sign_modal_tab' href='javascript:' data-bs-target='#tab-sign_in_phone'>
+                <span>手机号登录</span>
+            </a>
+            <a class='text-muted text-decoration-none sign_modal_tab' href='javascript:' data-bs-target='#tab-reset'>
+                <span>找回忘记的密码</span>
+            </a>
+        </div>
+    </div>
+</div>

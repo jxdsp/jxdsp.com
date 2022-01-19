@@ -1,0 +1,22 @@
+<div class="container py-3 d-flex flex-column justify-content-center">
+    <div class="input-group">
+        <label class="d-none d-md-block input-group-text" for="jxInput">喜欢作品地址</label>
+        <input class="form-control border" type="search" name="videoUrl" id="jxInput" placeholder="请将喜欢列表内获得的分享链接内容粘贴到这里">
+    </div>
+    <div class="mb-4 small text-muted">
+        <span class="small">提示：双击输入框或者粘贴内容时，自动清空输入框。</span>
+    </div>
+    <div class="mt-4 d-flex justify-content-center" id="videoUrlBtn">
+        <button class="mx-1 btn btn-sm btn-success videoParse" type="button">立即解析</button>
+        <button class="mx-1 btn btn-sm btn-outline-secondary" type="button" title="打赏" id="donate">
+            <i class="fa fa-donate"></i>
+            <span>打赏</span>
+        </button>
+        <button class="mx-1 btn btn-sm btn-outline-secondary commonProblem" type="button" title="常见问题" data-bs-toggle="collapse" data-bs-target="#collapseFaq" aria-controls="collapseFaq" aria-expanded="false">
+            <i class="fa fa-question"></i>
+        </button>
+    </div>
+</div>
+<div class="collapse" id="collapseFaq">
+    @@include('./pages/faq.htm')
+</div>

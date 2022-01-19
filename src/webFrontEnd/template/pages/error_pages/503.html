@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('./_head.htm', {
+        "title": "服务器错误 - 解析短视频",
+        "description": "一天看一部好剧，一部好剧看一天。你想看的视频这里都能给你，无论长视频，短视频，重点不是长短，是视频。",
+        "keywords": "全网短视频解析下载,vip视频解析,视频解析网站,短视频解析,短视频解析下载,一键视频解析",
+        "meta": "@@include('./meta/_robots_noindex.htm')",
+        "style": "@@include('./pages/error_pages/_style.htm')",
+        "noScript": "@@include('./_noScript.htm')",
+        "script": "@@include('./_head_script.htm',{'path': '',})",
+    })
+</head>
+<body>
+<div class="min-vh-100 container d-flex flex-column justify-content-center align-items-center">
+    <div>服务器出现故障(代码503)</div>
+</div>
+@@include('./pages/error_pages/_script.htm')
+<script>
+    _analyticsPush_trackEvent(['状态码', '503'])
+</script>
+</body>
+</html>
