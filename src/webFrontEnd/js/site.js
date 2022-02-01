@@ -236,7 +236,7 @@ const footerAddX = () => {
   )
   footerX.append(footerRecord())
   footerX.append(footerCurrentTime())
-  footerX.append(copyRight('2019 - 2021 &copy process.env.DOMAIN_ROOT'))
+  footerX.append(copyRight('2019 - 2022 &copy process.env.DOMAIN_ROOT'))
 }
 
 $().ready(() => {
