@@ -35,7 +35,7 @@
 
         donate.addEventListener('click', () => {
             loadScript('/static/js/donate.min.js', () => {
-                bootstrapModalJs('', donateTab, createSmallCenterText('识别二维码进行任意金额的打赏', 'success'), 'sm', true)
+                bModal('', donateTab, createSmallCenterText('识别二维码进行任意金额的打赏', 'success'), 'sm', true)
             })
         })
     })
