@@ -230,13 +230,13 @@ function copyRight(text = '') {
 const footerAddX = () => {
   const footerX = document.querySelector('#footer_x')
 
-  footerX.append(footerQrCode())
   footerX.append(
-    disclaimer('视频归相关网站及作者所有，本站不存储、不编辑任何视频及图片。')
+    footerQrCode(),
+    disclaimer('视频归相关网站及作者所有，本站不存储、不编辑任何视频及图片。'),
+    footerRecord(),
+    footerCurrentTime(),
+    copyRight('2019 - 2022 &copy process.env.DOMAIN_ROOT')
   )
-  footerX.append(footerRecord())
-  footerX.append(footerCurrentTime())
-  footerX.append(copyRight('2019 - 2022 &copy process.env.DOMAIN_ROOT'))
 }
 
 $().ready(() => {
